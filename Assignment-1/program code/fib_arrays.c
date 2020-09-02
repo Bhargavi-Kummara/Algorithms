@@ -13,10 +13,12 @@ int fib(int n)
 }
 int main()
 { 
-	int n,res;
-	printf("Enter n: ");
+	int i,n;
+	printf("Enter no of terms: ");
 	scanf("%d",&n);
-	res = fib(n);
-	printf("Fibonacci(%d) = %d\n",n,res);
+	printf("Fibonacci series: ");
+	for(i=1;i<=n;i++)
+		printf("%d, ",fib(i));
+	printf("\n\n");
 	return 0;
 }
