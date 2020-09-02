@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-int fib(int n)
+long long int fib(int n)
 {
 	if(n<2)
 		return n;
@@ -10,13 +10,14 @@ int fib(int n)
 
 int main()
 {
-	int n,res;
-	printf("Enter number n: ");
+	int n,i;
+	printf("Enter number of terms: ");
 	scanf("%d",&n);
-	if(n<0)
-		printf("Error,you entered an invalid number");
-	res = fib(5);
-	printf("fibonacci(5) = %d\n",res);
+	printf("fibonacci series: ");
+	for(i=1;i<=n;i++)
+	{
+		printf("%lld, ",fib(i));
+	}
+	printf("\n\n");
 	return 0;
 }
-
