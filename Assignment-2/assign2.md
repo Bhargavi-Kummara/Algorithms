@@ -32,7 +32,7 @@ Time complexity = 4 units = constant = O(1)<br>
 
 __Observation:__<br> 
 * 3 units of time for arithmetic operations / , * and + <br> 
-* 1 unit time for return statement<br><br>
+* 1 unit time for return statement<br>
 
 Similarly for converting temperature from Fahrenheit to Celsius<br>
 __Pseudocode__:
@@ -48,7 +48,7 @@ __Observation:__<br>
 * 3 units of time for arithmetic operations / , * and - <br> 
 * 1 unit time for return statement<br>
 
-#__3.Find Area(a) and Perimeter (p) of a Square__ 
+### __3.Find Area(a) and Perimeter (p) of a Square__ 
 
 __Pseudocode for finding area:__
 ```c
@@ -72,3 +72,15 @@ Total Time complexity = 2 + 2 = 4 units = constant = O(1)<br>
 __Observation for computing both area and perimeter:__<br> 
 * 2 units time for arithmetic operation i.e multiplication- 
 * 2 units time for return statement<br>
+
+### __4.Find the Compound Interest (CI)__
+__Pseudocode:__
+```c
+compound_interest(P,r,n)   // P=principal investment, r=interest rate, n= no: of compoundings a year
+{
+    return P*(pow(1+r/100),n) - P  // 4+log(n) units of time ; 3 units time for /,*,+ opeartions; log(n) time for power function pow; 1 unit time for return statement
+}
+```
+Time complexity = 4+log(n) = log(n) + constant = O(log n)<br>
+__Observation:__
+* pow(base,exponent) inbuilt function calculates power in __log(exponent)__ times. In-order to use this built-in function, math.h library should be included.
