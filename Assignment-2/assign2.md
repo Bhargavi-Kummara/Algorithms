@@ -153,7 +153,7 @@ for i=1 to 50         // (50 + 1)units times it runs(+1 for the end false condit
         output i       // 1 unit time to output
 }
 ```
-Time complexity = (51)*(1+1) = 51*2 = 106 units time = Constant time = O(1)<br><br>
+Time complexity = (51).(1+1) = (51).(2) = 106 units time = Constant time = O(1)<br><br>
 __Observation:__
 * Here if the for loop runs for i=0 to n, then the time complexity would be (n+1)*2 = 2n + 1 = C1*n + C2 = O(n).
 
