@@ -1,8 +1,6 @@
 # Assignment-2
 
-## On Analysis of Time Complexity<br>
-
-<ins>Time complexity of computational problems:</ins> 
+## Time complexity of computational problems:
 
 ### __1.Find the sum of two numbers a and b__
 
@@ -79,7 +77,7 @@ __Observation for computing both area and perimeter:__<br>
 
 __Pseudocode:__
 ```c
-compound_interest(P,r,n)   // P=principal investment, r=interest rate, n= no: of compoundings a year
+compound_interest(P,r,n)   // P= principal investment, r= interest rate, n= no: of compoundings a year
 {
     return P*(pow(1+r/100),n) - P  // 4+log(n) units of time ; 3 units time for /,*,+ opeartions; log(n) time for power function pow; 1 unit time for return statement
 }
@@ -118,3 +116,61 @@ smallest(a,b)
 Time complexity = 2 units = constant = O(1)<br><br>
 __Observation:__
 * After the function call, if condition checks which if a>b which takes a unit time and if it is true then returns the value, otherwise goes to the else part and returns the other value.<br>
+
+### __7.Find the largest of three numbers a, b and c__
+
+__Pseudocode:__
+```c
+largest(a,b,c)
+{
+    if a>b               // 1 unit time
+    {
+        if a>c           // 1 unit time 
+            return a     // 1 unit time
+        else
+            return c
+    }
+    else if b>a
+    {
+        if b>c
+            return b
+        else
+            return c
+    }
+}
+```
+Time complexity = 3 units time = constant = O(1)<br><br>
+__Observation:__
+* Like in the smallest of two, here we compare the largest of any two numbers first and then compare the larger one with remaining one. As all these comparisons take one unit time each, we do two comparisons and return the largest one. So in total takes 3 units time.
+
+### __8.Find Even numbers between 1 to 50__
+
+__Pseudocode:__
+```c
+for i=1 to 50         // (50 + 1)units times it runs(+1 for the end false condition)
+{
+    if i%2 is 0       // 1 unit time to find remaider
+        output i       // 1 unit time to output
+}
+```
+Time complexity = (51)*(1+1) = 51*2 = 106 units time = Constant time = O(1)<br><br>
+__Observation:__
+* Here if the for loop runs for i=0 to n, then the time complexity would be (n+1)*2 = 2n + 1 = C1*n + C2 = O(n).
+
+### __9.Find Sum of Series 1+2+3+…...+N__
+
+__Pseudocode:__
+```c
+series_sum(n)            // n denotes number of terms to be summed in series
+{
+    sum = 0              // 1 time unit
+    for i=1 to n         // runs for (n+1) times including end false condition
+    {
+        sum = sum + i   // 1 unit time
+    }
+    return sum          // 1 unit time
+}
+```
+Time complexity = 1+(n+1)*1 + 1 = n+3 = __O(n)__<br><br>
+__Observation:__
+* In total it takes n+3 units time, 3 units time is neglible for the worst case scenario. Therefore, TimeComplexity is O(n)
