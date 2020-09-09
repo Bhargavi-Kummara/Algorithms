@@ -1,6 +1,8 @@
 # Assignment-2
 
-## On Analysis of Time Complexity:<br>
+## On Analysis of Time Complexity<br>
+
+<ins>Time complexity of computational problems:</ins> 
 
 ### __1.Find the sum of two numbers a and b__
 
@@ -74,6 +76,7 @@ __Observation for computing both area and perimeter:__<br>
 * 2 units time for return statement<br>
 
 ### __4.Find the Compound Interest (CI)__
+
 __Pseudocode:__
 ```c
 compound_interest(P,r,n)   // P=principal investment, r=interest rate, n= no: of compoundings a year
@@ -81,6 +84,37 @@ compound_interest(P,r,n)   // P=principal investment, r=interest rate, n= no: of
     return P*(pow(1+r/100),n) - P  // 4+log(n) units of time ; 3 units time for /,*,+ opeartions; log(n) time for power function pow; 1 unit time for return statement
 }
 ```
-Time complexity = 4+log(n) = log(n) + constant = O(log n)<br>
+Time complexity = 4+log(n) = log(n) + constant = O(log n)<br><br>
 __Observation:__
-* pow(base,exponent) inbuilt function calculates power in __log(exponent)__ times. In-order to use this built-in function, math.h library should be included.
+* pow(base,exponent) inbuilt function calculates power in __log(exponent)__ times. In-order to use this built-in function, math.h library should be included.<br>
+
+### __5.Swap Two Numbers using Temporary Variable__
+
+__Pseudocode:__
+```c
+swap(a,b)
+{
+    temp = a    // storing value of a in temp   ; 1 unit time
+    a = b       // assigning value of b to a    ; 1 unit time
+    b = temp    // assigning value of temp to b ; 1 unit time 
+}
+```
+Time complexity = 3 = constant = O(1)<br><br>
+__Observation:__
+* 1 unit time for searching address of variable and storing each time. There are three such operations. Hence, 3 units time in total.<br>
+
+### __6.Find the Smallest of two numbers a and b__
+
+__Pseudocode:__
+```c
+smallest(a,b)
+{
+    if a>b              // 1 unit time for comparison
+        return b       
+    else
+        return a        
+}
+```
+Time complexity = 2 units = constant = O(1)<br><br>
+__Observation:__
+* After the function call, if condition checks which if a>b which takes a unit time and if it is true then returns the value, otherwise goes to the else part and returns the other value.<br>
