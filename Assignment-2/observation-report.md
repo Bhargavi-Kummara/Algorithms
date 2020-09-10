@@ -14,7 +14,7 @@ __Quick things to be observed from the image results:__
 >* When the program is compiled and executed 
 >* n=10, time is 0.7ms<br>
 >* n=50, time is 0.8ms<br>
->* n=100, time is 0.2ms<br><br>
+>* n=100, time is 0.2ms<br>
 
 So, we can say that actual time required to execute code is machine dependent.
-Hence, Instead of measuring actual time required in executing each statement in the code, we consider how many times each statement execute.
+Hence, Instead of measuring actual time required in executing each statement in the code, we consider how many times each statement executes in an algorithm or pseudocode.
