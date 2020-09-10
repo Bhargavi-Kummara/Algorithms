@@ -6,7 +6,8 @@ __Time Complexity of algorithm/code is not equal to the actual time required to 
 
 > time ./file
 
-
+<img src="file://IMG_20181123_115829.jpg" alt="alt text" width="200"/>
+![Compiled program results in C](compiled-program.png)
 
 These are the compilation results of the sum of series program in Linux based O.S i.e. Ubuntu with the following comm
 So, we can say that actual time required to execute code is machine dependent.
