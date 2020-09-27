@@ -20,10 +20,10 @@ Quicksort(Arr,low,high)
 1. Quick sort follows divide and conquer strategy.
 2. The above algorithm functions recursively. 
 
->* Time Complexity = O(n*logn)     [Worst Case]
+**Time Complexity = O(n*logn)  [Worst Case]**
 
 ### Execution time taken for sorting arrays with Quick sort using C++
-
+![Quick sort program execution](time_quicksort.png)
 
 # Merge Sort Algorithm
 ```cpp
@@ -40,7 +40,12 @@ Mergesort(low,high)
 ```
 1. Merge sort also follows Divide and Conquer strategy.
 2. The above algorithm functions recursively</br>
->* Recurrence relation: T(n) = 2T(n/2) + n
->* Time Complexity is O(n*logn) [For Best,Average and Worst cases]
+3. Recurrence relation: T(n) = 2T(n/2) + n
+**Time Complexity is O(n*logn)  [For Best,Average and Worst cases]**
 
 ### Execution time taken for sorting arrays with Merge sort using C++
+![Merge sort program execution](time_mergesort.png)
+
+**NOTE:**
+1. Merge sort is more efficient and works faster than quick sort in case of *large array size*
+2. Quick sort is more efficient and works faster than Merge sort in case of *small array size or data*
