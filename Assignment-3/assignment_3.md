@@ -3,7 +3,7 @@
 ### Also find Execution time for the given arrays using quick and merge sort
 ### 1. A[2.5,4.5,3.0,1.2,6.5,8.9,7.4,6.3]</br> 2. B[5,3,6,3,4,5,4,6,4] 
 
-# Quick Sort Algorithm
+# Quick Sort Algorithm:
 ```cpp
 Quicksort(Arr,low,high)
 {
@@ -20,12 +20,13 @@ Quicksort(Arr,low,high)
 1. Quick sort follows divide and conquer strategy.
 2. The above algorithm functions recursively. 
 
-**Time Complexity = O(n*logn)  [Worst Case]**
+**Time Complexity = O(n*logn)  [Worst Case]**</br></br>
 
 ### Execution time taken for sorting arrays with Quick sort using C++
 ![Quick sort program execution](time_quicksort.png)
 
-# Merge Sort Algorithm
+
+# Merge Sort Algorithm:
 ```cpp
 Mergesort(low,high)                        
 {
@@ -41,10 +42,12 @@ Mergesort(low,high)
 1. Merge sort also follows Divide and Conquer strategy.
 2. The above algorithm functions recursively</br>
 3. Recurrence relation: T(n) = 2T(n/2) + n
-**Time Complexity is O(n*logn)  [For Best,Average and Worst cases]**
+
+**Time Complexity is O(n*logn)  [For Best,Average and Worst cases]**</br></br>
 
 ### Execution time taken for sorting arrays with Merge sort using C++
 ![Merge sort program execution](time_mergesort.png)
+
 
 **NOTE:**
 1. Merge sort is more efficient and works faster than quick sort in case of *large array size*
