@@ -50,10 +50,6 @@ Quicksort(Arr,low,high)
 
 # Merge Sort Algorithm:
 ```cpp
-Merge(Arr[],low,mid,high)
-{
-
-}
 
 Mergesort(Arr[],low,high)                        
 {
@@ -65,6 +61,7 @@ Mergesort(Arr[],low,high)
                 Merge(Arr,low,mid,high);       // T(n) time
         }
 }
+
 ```
 1. Merge sort also follows Divide and Conquer strategy.
 2. The above algorithm functions recursively</br>
@@ -78,6 +75,7 @@ Mergesort(Arr[],low,high)
 
 ## Observation:
 On observing the results of sorting the arrays using Quick and Merge sort, we can say that Quick sort is fast compared to Merge sort (Since array sizes are small).Quick sort is in-place sorting and this sorting is done in main memeory, whereas Merge sort needs auxiliary memory for sorting.So, Quick sort is more preferred for sorting arrays. 
+</br></br>
 **NOTE:**
 1. Merge sort is more efficient and works faster than quick sort in case of *large array size*
 2. Quick sort is more efficient and works faster than Merge sort in case of *small array size or data*
