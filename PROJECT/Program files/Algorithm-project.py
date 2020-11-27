@@ -2,37 +2,8 @@
 # coding: utf-8
 
 # # Algorithm Project - EC351
-# 
-# ***
-# 
-# ## To do tasks: 
-# 
-# * **Write an Algorithm to SORT the image array using any suitable Sorting algorithms**
-# 
-# * **Sort them in an Ascending Order of their Size**
-# 
-# * **Given a new unknown image, search the new image in the array and display the result as found or not along with the image.**
-# 
-# * **Write a Program and find out the Time complexity for Searching and Sorting algorithm implementation of selected IMAGE Arrays**
-# 
-# * **No HARD code is allowed in the Program**
-# 
-# ***
-
-# 
-# # Implementation:
-# 
-# ***
-# ***
-# 
-# # Sequence of steps followed for implementation:
-# ***
-# ![Untitled%20Diagram%20%281%29.png](attachment:Untitled%20Diagram%20%281%29.png)
-# 
-# 
 
 # # Program
-# ***
 # ## Step:1 - Storing images into an array
 
 # In[ ]:
@@ -93,14 +64,4 @@ get_ipython().run_cell_magic('time', '', '# Sorting images and displaying\n\n#Se
 get_ipython().run_cell_magic('time', '', 'import matplotlib.pyplot as plt \nimport glob\nimport cv2\n\nnew_image = cv2.imread(\'Pictures/image3.jpg\')    #Loads new image to be searched\nprint("Image to be seached is below:")\nprint("Dimensions of image: ", new_image.shape)\nimg = cv2.cvtColor(new_image, cv2.COLOR_BGR2RGB) #Converts the image to be searched from BGR to RGB\nplt.imshow(img)                                  #Plots the image\nplt.show()\n\n\n# Declaring a variable flag to break from the loop if the searched item is found\nflag = 0\nprint("Searching started:\\n")\nfiles = glob.glob("D:\\Pictures\\cats\\*.JPG")\nfor myFile in files:\n    search = cv2.imread(myFile) \n    if search.shape == new_image.shape:                     #Checking if dimensions are same\n        print("\\nMatching dimensions found at: ", myFile)\n        print("Images have same shape...")\n        print("Let\'s check if they have same pixel values")\n        difference = cv2.subtract(search, new_image)        # Makes subtraction for each color(Red,Green,Blue) channel\n        b, g, r = cv2.split(difference)                     # Splitting colors from the subtracted image  \n        # Check if all the colors are black i.e..(0 - black ..... 255 - white)\n        if cv2.countNonZero(b) == 0 and cv2.countNonZero(g) == 0 and cv2.countNonZero(r) == 0:     \n            flag = 1\n            print("\\nYES! The images are completely EQUAL")\n            found = cv2.cvtColor(search, cv2.COLOR_BGR2RGB)\n            plt.imshow(found)\n            plt.show()\n        else:\n            print("Pixel values are not same!\\n")\n    # If the searching image is found \n    elif flag == 1:\n        break\n    else:\n        print("Image not found at: ", myFile)\n')
 
 
-# # Time Complexity analysis:
-# ***
-# ![Untitled%20Diagram%20%284%29.png](attachment:Untitled%20Diagram%20%284%29.png)
 
-# # List of references:
-# ***
-# 1. <a href="https://www.geeksforgeeks.org/defaultdict-in-python/" target="_blank">https://www.geeksforgeeks.org/defaultdict-in-python/</a>
-# 2. <a href="https://www.pluralsight.com/guides/importing-image-data-into-numpy-arrays" target="_blank">https://www.pluralsight.com/guides/importing-image-data-into-numpy-arrays</a>
-# 3. <a href="https://www.kite.com/python/answers/how-to-convert-a-numpy-array-to-an-image-in-python" target="_blank">https://www.kite.com/python/answers/how-to-convert-a-numpy-array-to-an-image-in-python</a>
-# 4. <a href="https://www.geeksforgeeks.org/how-to-use-glob-function-to-find-files-recursively-in-python/" target="_blank">https://www.geeksforgeeks.org/how-to-use-glob-function-to-find-files-recursively-in-python/</a>
-# 5. <a href="https://pysource.com/2018/07/19/check-if-two-images-are-equal-with-opencv-and-python/" target="_blank">https://pysource.com/2018/07/19/check-if-two-images-are-equal-with-opencv-and-python/</a>
